@@ -40,7 +40,7 @@ int main() {
   // This call is asynchronous and will call a callback function
   // which you will specify once the download is complete.
   emscripten_async_wget("calculate_primes.wasm", // file to download
-    "calculate_primes.wasm", // Name to give to the file in Emscripten’s file system
+    "calculate_primes.wasm", // Name to give to the file in Emscripten's file system
     CalculatePrimes, // Callback function on success
     DownloadErrorHandle); // Callback function on error
 
@@ -53,3 +53,5 @@ int main() {
 
 
 // emcc main.cc -s MAIN_MODULE=1 -o main.html
+
+// emcc main.cc -s MAIN_MODULE=2 -s EXPORTED_FUNCTIONS=['_putchar','_main','_iprintf']  -o main.html

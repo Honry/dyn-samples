@@ -35,5 +35,7 @@ void FindPrimes(int start, int end) {
 }
 #endif
 
-// modules disable dead code elimination, use normal dead code elimination by building with SIDE_MODULE=2
+
 //$ emcc calculate_primes.cc -s SIDE_MODULE=1 -O1 -o calculate_primes.wasm
+// modules disable dead code elimination, use normal dead code elimination by building with SIDE_MODULE=2
+// emcc calculate_primes.cc -s SIDE_MODULE=2 -O1 -o calculate_primes.wasm
