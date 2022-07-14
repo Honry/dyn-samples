@@ -52,6 +52,5 @@ int main() {
 #endif
 
 
-// emcc main.cc -s MAIN_MODULE=1 -o main.html
-
-// emcc main.cc -s MAIN_MODULE=2 -s EXPORTED_FUNCTIONS=['_putchar','_main','_iprintf']  -o main.html
+// emcc main.cc -s MAIN_MODULE=1 --bind -o main.html
+// emcc main.cc -s MAIN_MODULE=2 --bind -s EXPORTED_FUNCTIONS=['_putchar','_main','_iprintf'] -s RUNTIME_LINKED_LIBS=[calculate_primes.wasm] -o main.html
